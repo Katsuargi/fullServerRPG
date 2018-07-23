@@ -1,0 +1,159 @@
+			<div id="castle1" class="play">
+				<h2>King's Castle</h2>
+				<p id="startingText">You have finished character creation. Welcome to the starting area.
+					'Starting text here.'
+
+					The king has a quest for you.
+				</p>
+				<div id="navigationButtons">
+					<hr>
+					<button id="startQuest" onclick="princessQuest()">Accept quest.</button>
+					<!-- <button onclick="saveData()">Save Game.</button> -->
+					<button onclick="north()">North</button>
+					<button onclick="east()">East</button>
+				</div>
+			</div>
+
+			<div id="castle2" class="play">
+				<h2>King's Castle</h2>
+				<p id="kingQuestText">You have accepted the king's quest. He waits wait baited breath for you to hurry up and get on with it.
+				</p>
+				<div id="navigationButtons">
+					<hr>
+					<button onclick="east()">East</button>
+					<button onclick="north()">North</button>
+					<!-- <button onclick="saveData()">Save Game.</button> -->
+					<button id="returnPrincess" onclick="princessComplete()">Return Princess.</button>
+				</div>
+			</div>
+
+			<div id="castle3" class="play">
+				<h2>King's Castle</h2>
+				<p id="kingQuestText">The king and princess sit happily on their thrones.
+				</p>
+				<div id="navigationButtons">
+					<hr>
+					<button onclick="east()">East</button>
+					<button onclick="north()">North</button>
+					<!-- <button onclick="saveData()">Save Game.</button> -->
+				</div>
+			</div>
+
+			<div id="princessQuest" class="play">
+				<h2>The king wants you to save the princess from the dragon.</h2>
+				<p>Good luck!</p>
+				<div id="navigationButtons">
+					<hr>
+				</div>
+			</div>
+
+			<div id="forestEntrance" class="play">
+				<h2>The Forest Entrance</h2>
+				<p>You have moved to the entrance of the forest.</p>
+				<div id="navigationButtons">
+					<hr>
+					<button onclick="north()">North</button>
+					<button onclick="south()">South</button>
+				</div>
+			</div>
+
+			<div id="forest2" class="play">
+				<h2>In the forest.</h2>
+				<p>You have wandered deeper into the forest.</p>
+				<div id="navigationButtons">
+					<hr>
+					<button onclick="north()">North</button>
+					<button onclick="south()">South</button>
+				</div>
+			</div>
+
+			<div id="forest3" class="play">
+				<h2>In the forest.</h2>
+				<p>You stand at the mouth of the dragon's cave.</p>
+				<div id="navigationButtons">
+					<hr>
+					<button onclick="north()">Dragon's Cave</button>
+					<button onclick="south()">South</button>
+				</div>
+			</div>
+
+			<div id="dragonCave" class="play">
+				<h2> It's the Dragon's cave!</h2>
+				<span id="princessText">The cave is empty now.</span>
+					<div id="navigationButtons">
+						<hr>
+					<button onclick="south()">South</button>
+				    </div>
+			</div>
+
+			<div id="dragonCave2" class="play">
+				<h2> It's the Dragon's cave!</h2>
+				<span id="princessText">The princess is here.</span>
+					<div id="navigationButtons">
+						<hr>
+					<button onclick="south()">South</button>
+					<button id="princessRescue" onclick="savePrincess()">Save the Princess!</button>
+				    </div>
+			</div>
+
+			<div id="adminConsole" class="play">
+				<h2> This is the Developer Console!</h2>
+				<span id="monsters!">You may currently add or edit monsters!</span>
+					<form>
+				    	Name:<br>
+				    	<input type=text id="monName"><br>
+				    	Location:<br>
+				    	<input type=text id="monLocation"><br>
+				    	Strength:<br>
+				    	<input type=number id="monStr"><br>
+				    	Dexterity:<br>
+				    	<input type=number id="monDex"><br>
+				    	Stamina:<br>
+				    	<input type=number id="monSta"><br>
+				    </form>
+					<div id="navigationButtons">
+						<hr>
+					<button onclick="saveMonster()">Save Monster!</button>
+					<button onclick="loadMonster()">Load Monster!</button>
+				    </div>
+			</div>
+
+			<div id="adminDisplay" class="play">
+				<h2><span id="monsterN">Name</span></h2><br>
+				<h3>Location: <span id="monsterL"></span><br>
+				<h4>Stats:</h4>
+				<h3>Health: <span id="monsterH"></span><br>
+				<hr>
+
+				Strength: <span id="monsterSTR"></span><br>
+				Dexterity: <span id="monsterDEX"></span><br>
+				Stamina: <span id="monsterSTA"></span><br>
+				</br>
+				<hr>
+				Money: <span id="monsterMoney"></span></br>
+				EXP: <span id="monsterEXP"></span>/<span id="toLevel"></span></br>
+				<hr>
+			</div>
+				
+				<div id="inventoryarea" class="hide">
+					<h2>Inventory:</h2>
+					<h3><span id="inventory"></span></h3>
+				</div>
+
+			<div id="shop">
+			<h1>Store</h1><br>
+			Inventory goes here.<br>
+			Sword: +3 damage. 50 gold. <button id="swordB" onclick="addSword()">Add to cart.</button> <button id="swordR" onclick="removeSword()">Remove from cart.</button><br><br>
+
+			Leather Armor: +3 defense. 100 gold. <button id="leatherA" onclick="addLeatherA()">Add to cart.</button> <button id="leatherAR" onclick="removeLeatherA()">Remove from cart.</button><br><br>
+
+			Health Potion: Restores 25 health. 25 gold. <button id="healthP" onclick="addHPotion()">Add to cart.</button> <button id="healthPR" onclick="removeHPotion()">Remove from cart.</button><br><br>
+
+			Shopping cart:
+			<p id="bcart"></p>
+			<span id="price"></p></span><br>
+			<button id="buy" onclick="buy()">Make purchase.</button><br>
+			<button onclick="west()">West</button>
+
+		</div>
+

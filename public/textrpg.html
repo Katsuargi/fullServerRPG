@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Old School RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+
+	<header>
+	<!--	<img src="img/headerpicture.png" alt="headerpicture">
+		<h1 class="page name">Old School Text RPG</h1> -->
+	</header>
+
+	
+
+	<main class="mcontainer">
+
+		<div id="flex">
+			<div id="display">
+			<section class="topcontainer">
+				<div id="stats" class="hide">
+					<h2><span id="playern">Name</span></h2><br>
+					<h4>Stats:</h4>
+					<h3>Health: <span id="healthdisplay"></span><br>
+					<hr>
+
+					Strength: <span id="strdisplay"></span><br>
+					Dexterity: <span id="dexdisplay"></span><br>
+					Stamina: <span id="stadisplay"></span><br>
+					</br>
+					<hr>
+					Money: <span id="moneydisplay"></span></br>
+					EXP: <span id="expdisplay"></span>/<span id="toLevel"></span></br>
+					Stat Points: <span id="pointDisplay"></span></br></h3>
+					<hr>
+				</div>
+				
+				<div id="inventoryarea" class="hide">
+					<h2>Inventory:</h2>
+					<h3><span id="inventory"></span></h3>
+				</div>
+			</section>
+			</div>
+
+			<div id="playarea">
+
+				<div id="mainArea" class="play info">
+					<h2>You have 15 points to distribute.</h2>
+				    <form>
+				    	Name:<br>
+				    	<input type=text id="playerin" name="player"><br>
+				    	Strength: 1-10<br>
+				    	<input type=number id="str" name="Str"><br>
+				    	<p class="infotext">Strength increases damage.</br> 
+				    	Dexterity increases hid and dodge.</br>
+				    	Stamina increases HP.</p>
+				    	Dexterity: 1-10<br>
+				    	<input type=number id="dex" name="Dex"><br>
+				    	Stamina: 1-10<br>
+				    	<input type=number id="sta" name="Sta"><br>
+				    </form>
+				    <button id="test" onclick="storeTest()">Enter stats</button><br>
+				    <h3>If you already have a save game, enter your save code below. Can either save or delete game.</h3><br>
+				    <input type=text id="sCodeIn" name="sCode"><br>
+				    <button onclick="loadGame()">Load Game.</button>
+				    <button onclick="deleteData()">Delete Game.</button>
+				</div>
+
+			</div>
+
+			<div id="secondary-content" class="hide">
+				<span>Current quests:<br></span>
+				<span id="princess-logs"></span><br><br>
+				<span id="combat-logs"></span><br>
+				<button id="equip" onclick="equipment()">Equipment</button>
+				<button id="level-button" onclick="levelUpCheck()" class="hide">Level Up</button>
+			</div>
+		</div>
+		
+	</main>
+<script src="js/storestats.js"></script>
+<script src="js/adminConsole.js"></script>
+<script src="js/jq.js"></script>
+</body>
+</html>

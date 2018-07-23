@@ -1,0 +1,5 @@
+var suits = [s, c, h, d];
+
+var deck = [];
+
+function generateDeck()

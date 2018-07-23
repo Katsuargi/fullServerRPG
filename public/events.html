@@ -1,0 +1,47 @@
+<div id="dead" class="play">
+	<h2>You are dead.</h2>
+	<p>Play again later!</p>
+	<div id="navigationButtons">
+	</div>
+</div>
+
+<div id="victory" class="play">
+	<h2>You won the fight.</h2>
+	<p>Good job!</p>
+	<div id="navigationButtons">
+		<hr>
+		<button id="goBack" onclick="goBack()">Go Back.</button>
+	</div>
+</div>
+
+<div id="dragonKill" class="play">
+	<h2>You beat the Dragon!</h2>
+	<p>The princess is here.</p>
+	<div id="navigationButtons">
+		<hr>
+		<button id="princessSave" onclick="savePrincess()">Save the princess!</button>
+	</div>
+</div>
+
+<div id="level_up" class="play">
+	<h2>This is the level up screen.</h2>
+		<span id="levelUpStats">You can spend earned stats here.</span><br>
+		<hr>
+		Strength: <span id="strdisp"></span><button onclick="addStre()">Str+</button><br>
+		Dexterity: <span id="dexdisp"></span><button onclick="addDext()">Dex+</button><br>
+		Stamina: <span id="stadisp"></span><button onclick="addStam()">Sta+</button><br>
+		<br>
+		<hr>
+	<button id="goBack" onclick="goBack()">Exit.</button>
+	<hr>
+</div>
+
+<div id="equip_screen" class="play">
+	<h2>This is the equipment screen. You equip things here.</h2>
+	<span id="weapon">Weapon: You currently have a Knife equipped.</span><br>
+	<span id="armor">Armor: You're just wearing a simple shirt.</span><br>
+	<button id="goBack" onclick="goBack()">Exit.</button>
+	<hr>
+	<button id="populate" onclick="test2()">Click me!</button>
+	<hr>
+</div>
