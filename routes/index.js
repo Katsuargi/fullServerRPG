@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const path = require("path");
 const jsonParser = require('body-parser').json;
-let Character = require('../models');
-// let Monster = require('../models');
+let Character = require('../models/index.js');
+let Monster = require('../models/monsterschema.js');
 
 router.use(jsonParser());
 
@@ -39,14 +39,14 @@ router.put('/updatep', (req, res) =>{
 router.put('/saveMon', (req, res) =>{
 	console.log("Updated!");
 	console.log(req.body);
-	console.log(req.body.monName);
+	console.log(req.body.nameM);
 	Monster.findOneAndUpdate(
-		{name: req.body.mon.name}, 
+		{nameM: req.body.nameM}, 
 		req.body, 
 		{upsert: true}, 
-		(err, Character) => {
+		(err, Monster) => {
 			if (err) return res.status(500).send(err);
-	        return res.send(Character);
+	        return res.send(Monster);
     });
 });
 
@@ -56,6 +56,16 @@ router.get('/loadp/:loadid', (req, res) =>{
   		if (err) return console.error(err);
   		console.log(Character);
   		res.json(Character);
+	});
+});
+
+
+router.get('/load/:monId', (req, res) =>{
+	console.log(req.params.monId);
+	Monster.findOne({nameM: req.params.monId}, function (err, Monster) {
+  		if (err) return console.error(err);
+  		console.log(Monster);
+  		res.json(Monster);
 	});
 });
 
