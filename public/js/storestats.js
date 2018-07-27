@@ -351,19 +351,7 @@ function fEncounter() {
     var r = Math.random();
     console.log(r);
         if  (xCord >= 1 && xCord <= 5) {
-        if (r <= .25){ 
-            $("#playarea").load(monsters.gob);
-            enemyName=goblin;
-            enemyHealth = enemyName.health;
-        } 
-        else if (r >= .26 && r <= .5) {
-            $("#playarea").load(monsters.wolf);
-            enemyName=wolf;
-            enemyHealth = enemyName.health;
-        }
-        else {
-        $("#playarea").load(locations[areaToCord]);
-        }
+
     }
 
         if (xCord == 6.0 && yCord == 0.0 && quests.princess == 2) {
@@ -683,5 +671,26 @@ function levelUpCheck() {
             $('#playarea').load(events.levelUp);
         }
         saveData(player);
+    })
+}
+
+function loadingStuff() {
+    mon = $.ajax({
+        url:"/load/" + monId,
+        type:"GET",
+    })
+    return mon;
+}
+
+
+function randomMonsterGen() {
+    //random generation
+    
+}
+
+async function randomMonster() {
+    monId = (document.getElementById("monName").value);
+    //import data
+    loadingStuff().then(mon => {
     })
 }

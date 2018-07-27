@@ -69,6 +69,15 @@ router.get('/load/:monId', (req, res) =>{
 	});
 });
 
+router.get('/load/:monLocation', (req, res) =>{
+	console.log(req.params.monLocation);
+	Monster.find({location: req.params.location}, function (err, Monster) {
+  		if (err) return console.error(err);
+  		console.log(Monster);
+  		res.json(Monster);
+	});
+});
+
 router.post('/deletep', (req, res) =>{
 	Character.deleteOne({saveCode: req.body.save}, function (err, Character) {
   		if (err) return console.error(err);
